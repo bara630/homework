@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bara | Gamer & Football Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000000);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    color:white;
+}
+
+@keyframes gradientMove {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav h2{
+    color:#00f7ff;
+    text-shadow:0 0 10px #00f7ff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00f7ff;
+    text-shadow:0 0 8px #00f7ff;
+}
+
+/* SECTIONS */
+section{
+    padding:120px 20px;
+    text-align:center;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    backdrop-filter:blur(15px);
+    box-shadow:0 0 30px rgba(0,255,255,0.2);
+}
+
+h1{
+    font-size:40px;
+    margin-bottom:20px;
+    color:#00f7ff;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* BUTTONS */
+.buttons{
+    margin-top:25px;
+}
+
+button{
+    padding:12px 30px;
+    margin:10px;
+    border:none;
+    border-radius:30px;
+    background:#00f7ff;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:white;
+    transform:scale(1.1);
+    box-shadow:0 0 20px #00f7ff;
+}
+
+/* CONTENT BOX */
+.content-box{
+    margin-top:25px;
+    padding:20px;
+    border-radius:15px;
+    background:rgba(0,0,0,0.7);
+    min-height:180px;
+    transition:0.4s;
+}
+
+.content-box img{
+    width:100%;
+    max-width:400px;
+    border-radius:15px;
+    margin-top:15px;
+    box-shadow:0 0 20px rgba(0,255,255,0.4);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.7);
+    margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <h2>Bara</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gaming">Gaming</a></li>
+        <li><a href="#football">Football</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <div class="container">
+        <h1>About Me 👋</h1>
+        <p>
+            My name is <strong>Bara</strong>. I am 16 years old and I was born on 5/5/2010 in Jerusalem.<br><br>
+            I study at <strong>Technology School</strong>. 💻<br>
+            My classroom teacher is <strong>Ibrahim Shweiki</strong>.<br><br>
+            I love my friends ❤️ and my favorite subjects are Computer Science, Math, and Physics.
+        </p>
+    </div>
+</section>
+
+<section id="gaming">
+    <div class="container">
+        <h1>🎮 Video Games</h1>
+        <p>
+            Video games are one of my biggest hobbies. I enjoy both story-based games 
+            with amazing adventures and online competitive games where I can play with friends.
+        </p>
+
+        <!-- Interactive Buttons -->
+        <div class="buttons">
+            <button onclick="showContent('story')">Story Games</button>
+            <button onclick="showContent('online')">Online Games</button>
+        </div>
+
+        <div class="content-box" id="content">
+            Click a button to explore my favorite type of games 🚀
+        </div>
+    </div>
+</section>
+
+<section id="football">
+    <div class="container">
+        <h1>⚽ Football</h1>
+        <p>
+            Football is one of my greatest passions.  
+            I love the excitement, speed, and teamwork in every match.  
+            Watching and playing football makes me feel energetic and motivated.  
+            It teaches discipline, strategy, and never giving up.  
+            Every game is full of action and unforgettable moments.
+        </p>
+        <img src="football.jpg" alt="Football">
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h1>Contact</h1>
+        <p>Thanks for visiting my website! 😎🔥</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Bara | Gamer & Football Portfolio
+</footer>
+
+<script>
+function showContent(type){
+    const content=document.getElementById("content");
+
+    if(type==="story"){
+        content.innerHTML=`
+        <h2>📖 Story Games</h2>
+        <p>
+        Story games feel like interactive movies. They have deep characters,
+        emotional adventures, and exciting journeys. <br>
+        Some of my favorite story games are: <strong>RDR2, Uncharted 4, Spider-Man 2</strong>.
+        </p>
+        <img src="story.jpg" alt="Story Games">
+        `;
+    }
+
+    if(type==="online"){
+        content.innerHTML=`
+        <h2>🌍 Online Games</h2>
+        <p>
+        Online games let me compete and play with friends worldwide.
+        They require teamwork, skill, and fast reactions.
+        Every match feels different and exciting.
+        </p>
+        <img src="online.jpg" alt="Online Game">
+        `;
+    }
+}
+</script>
+
+</body>
+</html>
